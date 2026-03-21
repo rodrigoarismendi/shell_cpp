@@ -1,0 +1,3 @@
+/home/rodrigo/codecrafters-shell-cpp/build/CMakeFiles/shell.dir
+/home/rodrigo/codecrafters-shell-cpp/build/CMakeFiles/edit_cache.dir
+/home/rodrigo/codecrafters-shell-cpp/build/CMakeFiles/rebuild_cache.dir

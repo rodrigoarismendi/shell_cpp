@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/rodrigo/codecrafters-shell-cpp/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
