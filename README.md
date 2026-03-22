@@ -1,34 +1,74 @@
-[![progress-banner](https://backend.codecrafters.io/progress/shell/23068840-6f08-418c-a835-9c05fa589c81)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
+# Shell C++ Practice Project
 
-This is a starting point for C++ solutions to the
-["Build Your Own Shell" Challenge](https://app.codecrafters.io/courses/shell/overview).
+This repository is a hands-on C++ learning project where I am building my own POSIX-compliant shell. It is inspired by the ["Build Your Own Shell" Challenge](https://app.codecrafters.io/courses/shell/overview) on CodeCrafters and serves as a platform for me to practice and strengthen my C++ skills.
 
-In this challenge, you'll build your own POSIX compliant shell that's capable of
-interpreting shell commands, running external programs and builtin commands like
-cd, pwd, echo and more. Along the way, you'll learn about shell command parsing,
-REPLs, builtin commands, and more.
+The project aims to implement a functional shell that can:
+- Parse and interpret shell commands.
+- Run external programs and built-in commands like `cd`, `pwd`, `echo`, and more.
+- Provide a simple REPL interface.
 
-**Note**: If you're viewing this repo on GitHub, head over to
-[codecrafters.io](https://codecrafters.io) to try the challenge.
+> **Note:** If you're viewing this repo on GitHub, head over to [codecrafters.io](https://codecrafters.io) to try the original challenge.
 
-# Passing the first stage
+---
 
-The entry point for your `shell` implementation is in `src/main.cpp`. Study and
-uncomment the relevant code, then run the command below to execute the tests on
-our servers:
+## Project Goals
 
-```sh
-codecrafters submit
-```
+- Learn and reinforce C++ programming concepts.
+- Understand how POSIX shells work internally.
+- Implement command parsing, process management, and built-in command handling.
 
-Time to move on to the next stage!
+---
 
-# Stage 2 & beyond
+## Setup & Dependencies
 
-Note: This section is for stages 2 and beyond.
+### Prerequisites
 
-1. Ensure you have `cmake` installed locally
-1. Run `./your_program.sh` to run your program, which is implemented in
-   `src/main.cpp`.
-1. Run `codecrafters submit` to submit your solution to CodeCrafters. Test
-   output will be streamed to your terminal.
+- A Unix-like operating system (Linux or macOS recommended)
+- [CMake](https://cmake.org/) (version 3.10 or higher)
+- A C++ compiler supporting C++17 or newer (e.g., g++ or clang++)
+- GNU Make
+
+### Installation
+
+1. **Clone the repository:**
+    ```sh
+    git clone https://github.com/rodrigoarismendi/shell_cpp.git
+    cd shell_cpp
+    ```
+
+2. **Build the project:**
+    ```sh
+    mkdir build
+    cd build
+    cmake ..
+    make
+    ```
+
+3. **Run the shell:**
+    ```sh
+    ./your_program.sh
+    ```
+
+   _The implementation entry point is in `src/main.cpp`._
+
+---
+
+## Submitting to CodeCrafters
+
+If you are participating in the CodeCrafters challenge:
+
+- Submit your solution to their servers using:
+    ```sh
+    codecrafters submit
+    ```
+  _Test output will be streamed to your terminal._
+
+---
+
+## License
+
+This project is for personal learning purposes.
+
+---
+
+Happy hacking! 🚀
