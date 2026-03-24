@@ -2,12 +2,13 @@
 #include <string>
 #include <sstream>
 #include <unordered_set>
-
+#include <unistd.h>
 
 int main() {
   // Flush after every std::cout / std:cerr
   std::cout << std::unitbuf;
   std::cerr << std::unitbuf;
+  const char* path_env = std::getenv("PATH");
 
   const std::unordered_set<std::string> builtins = {
     "echo",
@@ -36,12 +37,27 @@ int main() {
     }
     else if (cmd == "type") {
         std::string arg;
+        bool is_builtin = false; 
         iss >> arg;
 
         if (builtins.find(arg) != builtins.end()) {
             std::cout << arg << " is a shell builtin\n";
-        } else {
+            break;
+        } 
+        else if (!is_builtin){
+          std::stringstream ss_path(path_env);
+          std::string path;
+          while (std::getline(ss_path, path, ':')) {
+            std::string full_path = path + '/' + arg;
+            if (access(full_path.c_str(), X_OK) == 0){
+              std::cout << arg << " is " << full_path << std::endl;
+              break;
+            }
+          }
+        }
+        else {
             std::cout << arg << ": not found\n";
+            break;
         }
     }
     else {
